@@ -10,7 +10,7 @@ class MyAudioServices{
       print('assets/$s');
       _audioPlay.open(Audio('assets/$s'),autoStart: false);
         } catch (e) {
-      print('======error while play====== $e');
+      print('======Exception error while open ====== $e');
     }
 
   }
