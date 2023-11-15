@@ -4,11 +4,10 @@ import 'package:flutter_audio_player/sevieces/audio_service.dart';
 class MyListTile extends StatelessWidget {
   final String title;
   final String subtitle;
-  //List<String> samples =['sample1','sample2','sample3','sample4','sample5','sample6'];
-  //String sample;
+  String sample;
 
 
-  MyListTile({required this.title, required this.subtitle, super.key,});
+  MyListTile({required this.title, required this.subtitle, super.key,required this.sample});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +20,8 @@ class MyListTile extends StatelessWidget {
         subtitle: Text(subtitle),
         trailing: IconButton(icon:const Icon(Icons.play_arrow),onPressed:(){
           final audio=MyAudioServices();
-          //MyAudioServices.playSound(); //calling of static method
+          print (sample);
+          audio.initAudio(sample);
           audio.playSound();
         } ,),
       ),
