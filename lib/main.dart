@@ -41,7 +41,10 @@ class _MyHomePageState extends State<MyHomePage> {
     'sample4.mp3',
     'sample5.mp3',
     'sample6.mp3',
-    'sample7.mp3'
+    'sample7.mp3',
+    'sample8.mp3',
+    'sample9.mp3',
+    'sample10.mp3'
   ];
 /*
   void initStata() {
@@ -67,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
 
               ...List.generate(
-                  7,
+                  10,
                   (index) => MyListTile(
                       title: '${index}',
                       subtitle: 'sample ${index}',
