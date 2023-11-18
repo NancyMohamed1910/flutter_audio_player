@@ -1,6 +1,6 @@
+import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 
-import 'package:flutter_audio_player/sevieces/audio_service.dart';
 import 'package:flutter_audio_player/widgets/list_widget.dart';
 
 void main() {
@@ -47,15 +47,15 @@ class _MyHomePageState extends State<MyHomePage> {
     'sample10.mp3'
   ];
 /*
-  void initStata() {
-     for(var i=0;i<7;i++) {
-      final s=MyAudioServices();
-      s.initAudio(samples[i]);
-  //    MyAudioServices.initAudio(samples[i]);
+  void initStat() {
+    for (var i = 0; i < 10; i++) {
+      var audioItem = AssetsAudioPlayer();
+      audioItem.open(Audio('assets/samples[i]'), autoStart: true);
+      //    MyAudioServices.initAudio(samples[i]);
     }
     super.initState();
-  }
-*/
+  }*/
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,14 +68,12 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-
               ...List.generate(
                   10,
                   (index) => MyListTile(
-                      title: '${index}',
-                      subtitle: 'sample ${index}',
+                      title: '${index + 1}',
+                      subtitle: 'sample ${index + 1}',
                       sample: samples[index]))
-
             ],
           ),
         ),
